@@ -4,4 +4,18 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-// You can delete this file if you're not using it
+exports.createPages = ( { actions } ) => {
+
+	const { createPage } = actions;
+
+	const person = [
+		{
+			name: 'Imran Sayed',
+			job: 'WordPress Engineer'
+		},
+		{
+			name: 'Lara Croft',
+			job: 'Actress'
+		},
+	]
+};
