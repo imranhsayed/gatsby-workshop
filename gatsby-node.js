@@ -8,14 +8,26 @@ exports.createPages = ( { actions } ) => {
 
 	const { createPage } = actions;
 
-	const person = [
+	const employees = [
 		{
 			name: 'Imran Sayed',
 			job: 'WordPress Engineer'
 		},
 		{
-			name: 'Lara Croft',
-			job: 'Actress'
+			name: 'John Hunt',
+			job: 'React Developer'
 		},
-	]
+	];
+
+	/**
+	 * Loop through the data and provide the path, template, and context
+	 * (data that will be passed in the props’ pageContext) to createPage for each invocation
+	 */
+	employees.forEach( employee => {
+		createPage({
+			path: `/${ employee.name }`,
+			component: require.resolve( `./src/templates/employee-template.js` ),
+			context: { employee }
+		})
+	} );
 };
