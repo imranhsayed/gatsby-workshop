@@ -8,7 +8,7 @@ A Gatsby Workshop
 
     ```shell
     
-    git clone https://github.com/imranhsayed/gatsby-workshop
+    git clone git@github.com:imranhsayed/gatsby-workshop.git
     
     ```
 
