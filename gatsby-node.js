@@ -10,11 +10,11 @@ exports.createPages = ( { actions } ) => {
 
 	const employees = [
 		{
-			name: 'Imran Sayed',
+			name: 'Imran',
 			job: 'WordPress Engineer'
 		},
 		{
-			name: 'John Hunt',
+			name: 'John',
 			job: 'React Developer'
 		},
 	];
