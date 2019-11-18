@@ -31,16 +31,15 @@ module.exports = {
 		// To learn more, visit: https://gatsby.dev/offline
 		`gatsby-plugin-offline`,
 		`gatsby-plugin-styled-components`,
-
 		{
-			resolve: `gatsby-source-graphql`,
+			resolve: "gatsby-source-graphql",
 			options: {
-				// This type will contain remote schema Query type
-				typeName: `WPGraphQL`,
-				// This is field under which it's accessible
-				fieldName: `wpgraphql`,
+				// Arbitrary name for the remote schema Query type
+				typeName: "WPGraphQL",
+				// Field under which the remote schema will be accessible. You'll use this in your Gatsby query
+				fieldName: "wpgraphql",
 				// Url to query from
-				url: `http://localhost:8888/wordpress-login/graphql`,
+				url: "https://mtwoblog.com/graphql",
 			},
 		},
 	],
