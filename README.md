@@ -2,6 +2,10 @@
 
 A Gatsby Workshop
 
+## [Live Demo](https://gatsby-meetup.netlify.com/blog)
+
+![](demo.png)
+
 ## 🚀 Quick start
 
 1.  **Clone the repo.**
