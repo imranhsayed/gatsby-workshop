@@ -4,3 +4,11 @@ html {
 p {
 	color: maroon;
 }
+
+.current-page {
+	color: #fdff5e !important;
+}
+
+.entry-content * {
+	color: #333;
+}

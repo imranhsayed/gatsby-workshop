@@ -37,6 +37,7 @@ const Header = ({ siteTitle }) => (
 				display: 'flex',
 				marginRight: '16px'
 			}}
+			activeClassName="current-page"
 			to="/blog">
 			Blogs
 		</Link>
@@ -46,6 +47,7 @@ const Header = ({ siteTitle }) => (
 				textDecoration: `none`,
 				display: 'flex'
 			}}
+			activeClassName="current-page"
 			to="/about">
 			About
 		</Link>

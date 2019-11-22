@@ -36,9 +36,9 @@ const Layout = ({ children }) => {
       >
         <main style={{ minHeight: '75vh' }}>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Built with
+          © {new Date().getFullYear()}, by <a style={{ textDecoration: 'none' }} href="https://twitter.com/imranhsayed">Imran Sayed</a> Built with
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <a style={{ textDecoration: 'none' }} href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
       </div>
     </>

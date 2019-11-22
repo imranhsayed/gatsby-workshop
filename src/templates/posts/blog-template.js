@@ -10,7 +10,7 @@ const BlogTemplate = ({ pageContext: { nodes } }) => {
 				{
 					nodes && nodes.map(post => {
 
-						const { id, postId, title, content, excerpt, uri } = post;
+						const { id, postId, title, content, excerpt, uri, featuredImage } = post;
 
 						const maxLength = 240; // maximum number of characters to extract
 
@@ -40,6 +40,10 @@ const BlogTemplate = ({ pageContext: { nodes } }) => {
 										<h2 dangerouslySetInnerHTML={{ __html: title }} />
 									</Link>
 								</header>
+
+								{/* Featured Image*/}
+								{ ( undefined !== featuredImage && null !== featuredImage ) ? <img src={ featuredImage.sourceUrl } srcSet={ featuredImage.srcSet } alt={ featuredImage.altText }/>  : '' }
+
 								<div
 									className="entry-content"
 									dangerouslySetInnerHTML={{

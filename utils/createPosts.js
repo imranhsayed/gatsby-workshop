@@ -13,6 +13,10 @@ const GET_POSTS = `
 			    title
 			    excerpt
 			    content
+			    featuredImage {
+		            srcSet
+		            sourceUrl
+	          }
           }
       }
   }

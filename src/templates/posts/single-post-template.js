@@ -3,24 +3,8 @@ import Layout from "../../components/layout";
 
 const SinglePostTemplate = props => {
 	const {
-		      pageContext: { id, postId, title, content, excerpt, categories, tags, date }
+		      pageContext: { id, postId, title, content, categories, tags, date, featuredImage }
 	      } = props;
-
-	const maxLength = 240 // maximum number of characters to extract
-
-	// getting the excerpt to a variable
-	let excerptText = excerpt
-
-	// if excerpt does not exist
-	if (!excerptText) {
-		// getting the first 240 characters off content
-		excerptText = content.substr(0, maxLength)
-
-		// so that a word is not chopped off halfway
-		excerptText = content
-			.substr(0, Math.min(excerptText.length, excerptText.lastIndexOf(" ")))
-			.concat("...")
-	}
 
 	return (
 		<Layout classNames="blog">
@@ -32,6 +16,9 @@ const SinglePostTemplate = props => {
 				<header className="entry-header">
 					<h1 className="entry-title" dangerouslySetInnerHTML={{ __html: title }} />
 				</header>
+
+				{/* Featured Image*/}
+				{ ( undefined !== featuredImage && null !== featuredImage ) ? <img src={ featuredImage.sourceUrl } srcSet={ featuredImage.srcSet } alt={ featuredImage.altText }/>  : '' }
 
 				<div
 					className="entry-content"
