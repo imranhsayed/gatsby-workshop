@@ -1,5 +1,6 @@
 
 const blogTemplate = require.resolve('../src/templates/posts/blog-template');
+const singlePostTemplate = require.resolve( '../src/templates/posts/single-post-template' );
 
 const GET_POSTS = `
   query GET_POSTS {
@@ -63,6 +64,18 @@ module.exports = async ({ actions, graphql }) => {
   };
 
   await fetchPosts().then( allPosts => {
+
+	  allPosts &&
+	  allPosts.map((post, index) => {
+		  createPage({
+			  path: `/blog/${post.uri}/`,
+			  component: singlePostTemplate,
+			  context: {
+				  ...post
+			  },
+		  })
+	  });
+
         createPage(blogPage)
   })
 };
