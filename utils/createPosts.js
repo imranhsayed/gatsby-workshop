@@ -18,6 +18,7 @@ const GET_POSTS = `
   }
 `;
 
+
 /**
  * Array to store allPosts. We make paginated requests
  * to WordPress to get allPosts, and once we have all posts,
