@@ -1,6 +1,6 @@
 ## Gatsby Workshop
 
-A Gatsby Workshop
+A Gatsby with WordPress Workshop.
 
 ## [Live Demo](https://gatsby-meetup.netlify.com/blog)
 
